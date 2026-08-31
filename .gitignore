@@ -1,0 +1,14 @@
+.venv/
+downloads/
+YouTube-Downloads/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.DS_Store
+*.mp3
+*.mp4
+*.m4a
+*.flac
