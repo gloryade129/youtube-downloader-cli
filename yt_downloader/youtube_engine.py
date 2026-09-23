@@ -90,7 +90,25 @@ def download_media(
         "quiet": True,
         "no_warnings": True,
         "noprogress": True,
+        "nooverwrites": True,
+        "download_archive": os.path.join(output_dir, ".downloaded_history.txt"),
         "restrictfilenames": False,
+        "retries": 15,
+        "fragment_retries": 15,
+        "file_access_retries": 15,
+        "continuedl": True,
+        "socket_timeout": 30,
+        "http_chunk_size": 10485760,
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["android", "web"],
+                "player_skip": ["js", "configs"],
+            }
+        },
+        "http_headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "Accept-Language": "en-US,en;q=0.9",
+        },
     }
 
     if ffmpeg_path:
